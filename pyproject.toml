@@ -12,13 +12,19 @@ dependencies = [
   "loguru==0.7.3",
   "opencv-python>=4.13.0.92",
   "patchright==1.58.2",
+  "playwright>=1.52.0",
   "qrcode==8.2",
   "requests==2.32.3",
   "segno>=1.6.6",
+  "anthropic>=1.13.0",
+  "pillow>=10.0",
+  "pillow-heif>=0.18",
+  "pyyaml>=6.0",
 ]
 
 [project.scripts]
 sau = "sau_cli:main"
+sns = "sns_publish.cli:main"
 
 [project.optional-dependencies]
 web = [
@@ -34,7 +40,7 @@ py-modules = ["cli_main", "conf", "sau_cli"]
 include-package-data = true
 
 [tool.setuptools.packages.find]
-include = ["uploader*", "utils*", "myUtils*"]
+include = ["uploader*", "utils*", "myUtils*", "sns_publish*"]
 
 [tool.setuptools.package-data]
 utils = ["stealth.min.js"]

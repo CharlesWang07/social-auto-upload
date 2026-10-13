@@ -1,0 +1,10 @@
+# 复制为 sns_config.yaml 后按需修改
+platforms: [douyin, xiaohongshu, tiktok, instagram]   # 默认发布的平台和顺序
+account: default                                      # 账号名（登录态保存在 cookies/<平台>_<账号名>.json）
+inbox: ~/Desktop/SNS上传/待发布                         # 收件箱：每个子文件夹是一条帖子
+done_dir: ~/Desktop/SNS上传/已发布                      # 全部平台发完后移到这里
+ai_captions: true                                     # 没写文案时用 Claude 看图生成（需要 ANTHROPIC_API_KEY）
+model: claude-opus-5-5
+overseas_language: English                            # TikTok / Instagram 文案语言
+headless: true                                        # false = 显示浏览器窗口
+timeout_minutes: 20                                   # 单个平台的超时时间
